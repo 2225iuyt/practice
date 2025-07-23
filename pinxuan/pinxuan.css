@@ -1,0 +1,462 @@
+/* --- 通用設定與重置 --- */
+body {
+    font-family: 'Arial', 'Microsoft JhengHei', sans-serif; /* 更改字體，優先使用 Arial，如果沒有則用微軟正黑體 */
+    margin: 0; /* 移除預設的 body 外邊距 */
+    background-color: #f8f8f8; /* 淺灰色背景 */
+    color: #333; /* 預設文字顏色 */
+    line-height: 1.6; /* 增加行高，提升閱讀舒適度 */
+}
+
+/* 確保所有圖片響應式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 移除圖片底部的空隙 */
+}
+
+/* 連結基本樣式 */
+a {
+    text-decoration: none;
+    color: #007bff; /* 藍色連結 */
+    transition: color 0.3s ease; /* 顏色過渡效果 */
+}
+
+a:hover {
+    color: #0056b3; /* 懸停時變深藍 */
+}
+
+/* --- 標題樣式 --- */
+h1, h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333; /* 標題顏色 */
+}
+
+.ranbow-linear-gradient {
+    /* 調整為更現代的漸變效果 */
+    background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text; /* 裁剪背景為文字形狀 */
+    background-clip: text;
+    color: transparent; /* 文字本身透明，顯示背景漸變 */
+    font-size: 3em; /* 讓標題更大 */
+    padding: 20px 0; /* 增加上下內距 */
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px; /* 增加字距 */
+}
+
+/* --- 佈局與區塊樣式 --- */
+header {
+    background-color: #fff;
+    padding-bottom: 20px; /* 標題圖片下方留一些空間 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+}
+
+main {
+    max-width: 1000px; /* 限制主要內容的最大寬度 */
+    margin: 20px auto; /* 水平置中，上下外邊距 20px */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* 圓角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 輕微陰影 */
+     
+}
+
+
+/* --- 各個區塊的通用樣式 --- */
+section {
+    margin-bottom: 30px; /* 區塊間距 */
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* --- 列表樣式 --- */
+ul, ol {
+    list-style-type: disc; /* 實心圓點 */
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li, ol li {
+    margin-bottom: 8px;
+}
+
+/* --- 文字與段落 --- */
+p {
+    margin-bottom: 15px;
+}
+
+small {
+    color: #666; /* 小字顏色 */
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* --- 表格樣式 --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 合併邊框 */
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd; /* 淺灰色邊框 */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* 表頭背景色 */
+    font-weight: bold;
+}
+
+tfoot td {
+    background-color: #f9f9f9; /* 表尾背景色 */
+    font-style: italic;
+}
+
+/* --- 表單樣式 --- */
+form {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    width: calc(100% - 22px); /* 考慮 padding 和 border */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* 讓 padding 和 border 不會增加元素總寬度 */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    resize: vertical; /* 只允許垂直調整大小 */
+    min-height: 80px;
+}
+
+/* --- 按鈕樣式 --- */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+/* --- 特殊 Class 樣式 --- */
+.fit {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #555; /* 讓它有自己的顏色 */
+}
+
+.blue {
+    color: #007bff;
+}
+
+.green {
+    color: #28a745;
+}
+
+.red {
+    background-color: #dc3545; /* 鮮紅色背景 */
+    color: white;
+}
+
+.red:hover {
+    background-color: #c82333;
+    transform: translateY(-2px); /* 滑鼠懸停時上移 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.red:active {
+    background-color: #bd2130;
+    transform: translateY(0); /* 點擊時恢復位置 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.yellow {
+    /* 這裡的 yellow class 是文字顏色，而不是背景色 */
+    color: #ffc107;
+}
+
+/* --- my-btn 樣式調整 --- */
+.my-btn {
+    background-image: url('2.png'); /* 您的 2.png 圖片 */
+    background-size: cover; /* 圖片覆蓋整個按鈕 */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 120px; /* 調整大小以適應背景圖 */
+    height: 60px; /* 調整大小以適應背景圖 */
+    border-radius: 10px; /* 保持圓角 */
+
+    /* 使用 Flexbox 實現內部文字水平垂直置中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0; /* 移除 padding，讓 flexbox 處理內容對齊 */
+    margin: 10px;
+    font-weight: 900;
+    color: white; /* 確保文字可見 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文字陰影增加可讀性 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 更柔和的陰影 */
+
+    /* 確保其本身像按鈕一樣互動 */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.my-btn:hover {
+    background-color: transparent; /* 背景圖片在 hover 時不變色 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* 懸停時陰影變大 */
+    transform: translateY(-3px); /* 懸停時輕微上移 */
+}
+
+.my-btn:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 點擊時陰影變小，模擬按下 */
+    transform: translateY(0); /* 點擊時恢復原位 */
+}
+
+/* --- Cercle 樣式調整 (圓形元素) --- */
+.cercle {
+    background-color: #fd345f; /* 粉紅色背景 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 確保是完美的圓形 */
+    border: #42b426 solid 10px; /* 綠色邊框 */
+
+    /* 使用 Flexbox 確保內部文字或內容完全置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 900;
+    color: white; /* 讓文字在圓形中清晰可見 */
+    font-size: 1.2em; /* 調整文字大小 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 增加文字陰影 */
+    margin: 20px; /* 增加一些外邊距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+}
+
+/* --- Message 樣式調整 (固定訊息框) --- */
+.message {
+    padding: 8px 12px; /* 調整內距 */
+    border: dimgrey solid 1px;
+    border-radius: 20px; /* 圓角更大，更像膠囊狀 */
+    background-color: #007bff; /* 藍色背景，與主要連結色系一致 */
+    color: white;
+    display: inline-block;
+    position: fixed;
+    top: 20px; /* 調整位置，離頂部更遠一些 */
+    right: 20px; /* 調整位置，離右側更遠一些 */
+    font-size: 0.9em; /* 調整字體大小 */
+    z-index: 1000; /* 確保在最上層 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+        /* --- 新增的動畫相關屬性 --- */
+    animation: flyIn 0.8s ease-out forwards, /* 飛入動畫 */
+               floatMessage 3s ease-in-out infinite alternate 0.8s; /* 浮動動畫，在飛入後開始 */
+    opacity: 0; /* 初始狀態隱藏，讓飛入效果更明顯 */
+    
+}
+
+.message:hover {
+    background-color: #0056b3; /* 懸停時顏色變深 */
+    transform: scale(1.05);  /*懸停時輕微放大 */
+}
+
+/* 如果 .message 後面有數字或圖標，可以這樣設計它的 ::after */
+.message:after {
+  content: "!"; /* 假設要顯示一個感嘆號 */
+  position: absolute;
+  top: -8px; /* 調整位置 */
+  right: -8px; /* 調整位置 */
+  width: 20px; /* 小圓點寬度 */
+  height: 20px; /* 小圓點高度 */
+  background-color: red; /* 紅色背景 */
+  color: white; /* 白色文字 */
+  border-radius: 50%; /* 圓形 */
+  display: flex; /* 使用 Flexbox 置中感嘆號 */
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em; /* 感嘆號大小 */
+  font-weight: bold;
+  border: 2px solid white; /* 白色邊框 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 定義飛入動畫 @keyframes --- */
+@keyframes flyIn {
+  0% {
+    transform: translateX(100%); /* 從右邊 100% (螢幕外) 開始 */
+    opacity: 0;                   /* 完全透明 */
+  }
+  70% {
+    transform: translateX(-5%);   /* 飛過頭一點點 */
+    opacity: 1;                   /* 完全不透明 */
+  }
+  100% {
+    transform: translateX(0);     /* 回到原本位置 */
+    opacity: 1;                   /* 完全不透明 */
+  }
+}
+
+/* --- 定義浮動動畫 @keyframes --- */
+@keyframes floatMessage {
+  0% {
+    transform: translateY(0);    /* 從正常位置開始 */
+  }
+  50% {
+    transform: translateY(-8px); /* 向上浮動 8px */
+  }
+  100% {
+    transform: translateY(0);    /* 回到正常位置 */
+  }
+}
+
+/* --- 定義浮動動畫 @keyframes --- */
+.massage.moved {
+  /* bottom: 500px;
+  right: 500px; */
+  opacity: 0.5;
+  /* 透明度 預設是1是完全不透明 0是完全透明 */
+  transition: transform 3s ease;
+  transform: translate(-300px, -300px);
+}
+
+
+/* --- 其他調整 --- */
+/* 將 li 元素變成行內塊，並添加一些樣式 */
+div li {
+    display: inline-block;
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* 如果有多個 li，向下留空間 */
+}
+
+/* 確保 form 內的 span 不會被亂改顏色，特別是 blue green-text */
+form .blue {
+    color: #007bff;
+}
+
+form .green.green-text {
+    color: #28a745; /* 再次強調這個 class 組合的顏色 */
+}
+
+/* 調整 color text 的樣式 */
+#pink {
+    color: hotpink; /* 特殊的粉色 */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 10px; /* 左右留空間 */
+}
+
+.blue .blue-text {
+    color: #007bff; /* 確保巢狀的 blue-text 是藍色 */
+}
+
+.blue .blue-text.yellow {
+    color: #ffc107; /* 如果同時有 yellow，則優先為黃色 */
+}
+
+.box1 {
+  display: inline-block;
+  /* 可以並排，但也能設定寬高 */
+  /* display: inline; */
+  /* 像文字一樣可以排在同一行 */
+  /* display: block; */
+  /* 可以設定寬高 內距 外距 */
+  /* display: inline-block;  */
+  /* inline + block */
+  width: 100px;
+  height: 100px;
+  background-color: rgb(175, 223, 255);
+  margin: 10px; /* 外距，讓元素之間有空隙 */
+  text-align: center; /* 文字水平置中 */
+  line-height: 100px; /* 文字行高 */
+  font-family: Arial, Helvetica, sans-serif;
+  /* 字體選擇 */
+  border-radius: 10px; /*圓角*/
+  font-weight: bold;
+  overflow: auto;
+  /*  overflow 當內容超出容器時的處理方式 */
+  /* overflow: visible; 預設 溢出來的內容會照樣顯示出來 不會被擋 */
+  /* overflow: auto; 自動判斷 溢出才會出現捲軸 */
+  /* overflow: hidden; 超出容器部分隱藏 */
+  /* overflow: scroll; 固定出現卷軸 */
+}
+
+.box2 {
+  background-color: rgb(69, 122, 244);
+  width: 100px;
+  height: 100px;
+  border-radius: 10px; /*圓角*/
+  margin: 10px; /* 外距，讓元素之間有空隙 */
+  text-align: center; /* 文字水平置中 */
+  line-height: 100px;
+}
+
+.box2:hover {
+  background-color: rgb(0, 255, 8);
+  width: 100px;
+  height: 100px;
+  border-radius: 10px; /*圓角*/
+  margin: 10px; /* 外距，讓元素之間有空隙 */
+  text-align: center; /* 文字水平置中 */
+  line-height: 100px;
+
+  transition: transform 3s ease;
+  /* 變化 3秒後會變成*/
+  /* ease 前快 中慢 後快 */
+  /* linear 同樣速度 */
+  /* ease-in 前慢 後快 */
+  /* ease-out 前快 後慢 */
+  /* ease-in-out 前慢 中快 後慢 */
+
+  transform: translate(50px, 100px) scale(1.5, 1.5) rotate(45deg)
+    skew(10deg, 10deg);
+  /* translate(50px 100px)  */
+  /* 平移 右移 50px，下移 100px */
+  /* transform: scale(1.5, 1.5); */
+  /* 縮放 x1.5倍 y1.5倍 */
+  /* transform: rotate(45deg); */
+  /* 旋轉 順時針旋轉 45 度  */
+  /* transform: skew(10deg, 10deg); */
+  /* 傾斜 X軸傾斜10度 Y軸傾斜10度 */
+
+  /* 只能寫一次transform: ???； 寫多會被覆蓋，可以寫在同一次裡 */
+}
+
+* {
+  box-sizing: border-box;
+}
+/* 盒子的寬度和高度，包含內距 padding 和邊框 border */
+/* ** 建議每個文件都加上 */

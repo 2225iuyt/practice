@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>品瑄的個人網頁</title>
+    <style>
+      .fit {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+    </style>
+    <link rel="stylesheet" href="pinxuan.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="ranbow-linear-gradient">品瑄</h1>
+      <img
+        src="https://shoplineimg.com/6641ba368261270042931b84/6659a5a17a5953a3ad1c33dd/2160x.png"
+        alt="頁面主視覺圖"
+      />
+    </header>
+
+    <main>
+      <section
+        style="display: flex; flex-direction: column; align-items: center"
+      >
+        <h2>連結與圖片</h2>
+        <a href="https://www.google.com" target="_blank">
+          <img
+            src="2.png"
+            alt="Google 連結圖示"
+            style="width: 100px; height: auto"
+          />
+        </a>
+      </section>
+
+      <section
+        style="display: flex; flex-direction: column; align-items: center"
+      >
+        <h2>條列式內容</h2>
+        <h3>我的清單</h3>
+        <ul>
+          <li>第一個項目</li>
+          <li>第二個項目</li>
+        </ul>
+      </section>
+
+      <section
+        style="display: flex; flex-direction: column; align-items: center"
+      >
+        <h2>個人簡介</h2>
+        <div>
+          <h3>學歷</h3>
+          <ul>
+            <li>南台科大<small>09xxxxxxxx</small></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="text-align: center">行事曆</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>上午</th>
+              <th>中午</th>
+              <th>下午</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>專業能力</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>飲食計畫</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>結論</td>
+              <td colspan="3">還沒下結論</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2 style="text-align: center">聯絡表單</h2>
+        <form action="">
+          <div>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" placeholder="請輸入姓名" />
+          </div>
+          <div>
+            <label for="age">年齡:</label>
+            <input type="number" id="age" placeholder="請輸入年齡" />
+          </div>
+          <div>
+            <label for="phone">電話:</label>
+            <input type="tel" id="phone" placeholder="請輸入電話" />
+          </div>
+          <div>
+            <label for="pwd">密碼:</label>
+            <input type="password" id="pwd" placeholder="請輸入pwd" />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="請輸入email" />
+          </div>
+          <div>
+            <h3>單選</h3>
+            <label><input type="radio" name="repeat" />是</label>
+            <label><input type="radio" name="repeat" />否</label>
+          </div>
+          <div>
+            <h3>複選</h3>
+            <label><input type="checkbox" name="flower" />銀杏花</label>
+            <label><input type="checkbox" name="flower" />石蒜花</label>
+            <label><input type="checkbox" name="flower" />金銀花</label>
+            <label><input type="checkbox" name="flower" />玫瑰花</label>
+          </div>
+          <div>
+            <span class="blue">備註</span>
+            <textarea name="notes" id="notes"></textarea>
+          </div>
+          <div>
+            <span class="green green-text" style="text-align: center"
+              >下拉式選單</span
+            >
+            <select name="country" id="country">
+              <option value="TW">台灣</option>
+              <option value="JP">日本</option>
+              <option value="US">美國</option>
+              <option value="CN">中國</option>
+            </select>
+          </div>
+          <button type="submit" class="red" style="text-align: center">
+            送出
+          </button>
+          <div class="my-btn">圖片按鈕</div>
+          <span id="pink" class="red-important yellow">顏色文字範例</span>
+          <span class="blue">
+            <span class="blue-text yellow">巢狀顏色文字</span>
+          </span>
+        </form>
+      </section>
+
+      <section
+        style="display: flex; flex-direction: column; align-items: center"
+      >
+        <h2>圓形元素與訊息框</h2>
+        <div class="cercle">圓形</div>
+        <div class="message">新通知</div>
+      </section>
+
+      <section>
+        <div class="box1">.box1-1 .box1-1 .box1-1</div>
+        <div class="box2">.box2-1</div>
+      </section>
+      <section>
+        <div class="massage" onclick="this.classList.toggle('moved')">
+          message
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
